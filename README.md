@@ -1,14 +1,14 @@
 # Telegram invite link generator
 
-## Uses
+## Configuration
 
 At the first start, if there is no configuration file, it will be generated
 
-Specify in the configuration file:
-- Bot token: `Token`
-- ID of the closed group where the bot is admin: `Group`
-- Maximum number of entries per link: `MembersLimit`
-- Number of requests per minute to the Telegram API: `RequestsPerMinute`
+Specify in the configuration file `conf.json`:
+- `Token` Bot token
+- `Group` ID of the closed group where the bot is admin
+- `MembersLimit` Maximum number of entries per link 
+- `RequestsPerMinute` Number of requests per minute to the Telegram API 
 
 ```json
 {
@@ -18,3 +18,10 @@ Specify in the configuration file:
   "MembersLimit": 1
 }
 ```
+
+## Uses
+Download the [latest release](https://github.com/olexin-pro/telegram-invite-link-generator/releases)
+
+Fill in the configuration file
+
+Run the .exe file
