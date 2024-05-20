@@ -2,7 +2,9 @@ package writer
 
 import (
 	"fmt"
+	"log"
 	"os"
+	"tg-invite-link-generator/config"
 )
 
 func WriteStringToFile(filepath string, data string) {
@@ -18,7 +20,12 @@ func WriteStringToFile(filepath string, data string) {
 
 	defer f.Close()
 
-	if _, err = f.WriteString(fmt.Sprintf("%s\r\n", data)); err != nil {
+	conf, cErr := config.LoadConfig()
+	if cErr != nil {
+		log.Fatal("Config loading error:", cErr)
+	}
+	withPrefPostString := fmt.Sprintf("%s%s%s", conf.Prefix, data, conf.Postfix)
+	if _, err = f.WriteString(fmt.Sprintf("%s\r\n", withPrefPostString)); err != nil {
 		panic(err)
 	}
 }
