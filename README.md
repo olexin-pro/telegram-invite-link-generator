@@ -1,5 +1,17 @@
 # Telegram invite link generator
 
+Generates both one-time and one-time links to join a closed group.
+
+[Информация на русском](README_RU.md)
+
+## Uses
+
+Download the [latest release](https://github.com/olexin-pro/telegram-invite-link-generator/releases)
+
+Fill in the configuration file
+
+Run the `.exe` file
+
 ## Configuration
 
 At the first start, if there is no configuration file, it will be generated
@@ -23,9 +35,3 @@ Specify in the configuration file `conf.json`:
 }
 ```
 
-## Uses
-Download the [latest release](https://github.com/olexin-pro/telegram-invite-link-generator/releases)
-
-Fill in the configuration file
-
-Run the .exe file
