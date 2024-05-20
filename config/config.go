@@ -48,7 +48,7 @@ func ConfigIsExists() bool {
 }
 
 func CreateConfig() {
-	data := []byte("{\n  \"Token\": \"YOU-TG-TOKEN\",\n  \"Group\": \"YOU-SECRET-GROUP-ID\"\n  \"RequestsPerMinute\": 30\n  \"MembersLimit\": 1\n}")
+	data := []byte("{\n  \"Token\": \"YOU-TG-TOKEN\",\n  \"Group\": \"YOU-SECRET-GROUP-ID\",\n  \"RequestsPerMinute\": 30,\n  \"MembersLimit\": 1\n}")
 	fo, err := os.Create(Path)
 	if err != nil {
 		panic(err)
